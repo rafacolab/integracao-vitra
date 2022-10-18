@@ -227,7 +227,7 @@ export class FundService {
 
     const manager =
       marketAgents.find(
-        (ma) => ma.IdAgente === Number(fund.CarteiraInfo.Custodiante),
+        (ma) => ma.IdAgente === Number(fund.CarteiraInfo.Gestor),
       ) || {};
     return { fund, administrator, custodiant, manager };
   }

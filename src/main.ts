@@ -5,6 +5,7 @@ import { StockService } from './services/stock.service';
 import { FundService } from './services/fund.service';
 import { CashService } from './services/cash.service';
 import yargs from 'yargs';
+import { PortfolioService } from './services/portfolio.service';
 
 async function bootstrap() {
   const argv = yargs(process.argv.slice(2)).argv as Record<string, any>;
@@ -13,6 +14,7 @@ async function bootstrap() {
   const stockService = app.get(StockService);
   const fundService = app.get(FundService);
   const cashService = app.get(CashService);
+  const portfolioService = app.get(PortfolioService);
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const fs = require('fs');
 
@@ -71,6 +73,8 @@ async function bootstrap() {
       startDate: argv.startDate,
       endDate: argv.endDate,
     });
+
+    await portfolioService.getPortfolios();
   } catch (error) {
     console.log(error);
   }

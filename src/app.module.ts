@@ -5,6 +5,7 @@ import { HttpModule } from '@nestjs/axios';
 import { StockService } from './services/stock.service';
 import { FundService } from './services/fund.service';
 import { CashService } from './services/cash.service';
+import { PortfolioService } from './services/portfolio.service';
 
 @Module({
   imports: [
@@ -18,6 +19,12 @@ import { CashService } from './services/cash.service';
       },
     }),
   ],
-  providers: [BondService, StockService, FundService, CashService],
+  providers: [
+    BondService,
+    StockService,
+    FundService,
+    CashService,
+    PortfolioService,
+  ],
 })
 export class AppModule {}
