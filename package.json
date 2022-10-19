@@ -26,11 +26,14 @@
     "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/typeorm": "^9.0.1",
     "alasql": "^2.1.4",
     "json-2-csv": "^3.17.2",
+    "mssql": "^9.0.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.5.7",
+    "typeorm": "^0.3.10",
     "yargs": "^17.6.0"
   },
   "devDependencies": {
